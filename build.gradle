@@ -21,8 +21,16 @@ repositories {
 	mavenCentral()
 }
 
-
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
+
+task zip(type: Zip, dependsOn: bootRepackage) {
+	from('build/libs') {
+		include '*.jar'
+	}
+	from 'src/main/bin'
+}
+
+build.dependsOn(zip)
