@@ -26,11 +26,14 @@ dependencies {
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
+// Can be tar or zip as per distribution plugin.
 task zip(type: Zip, dependsOn: bootRepackage) {
 	from('build/libs') {
 		include '*.jar'
 	}
-	from 'src/main/bin'
+	from('src/main/bin'){
+		fileMode 0770
+	}
 }
 
 build.dependsOn(zip)
