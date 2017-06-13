@@ -17,6 +17,11 @@ apply plugin: 'org.springframework.boot'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
+// TODO Find how I got gradle compiling with two mains.
+springBoot {
+	mainClass = 'com.llevett.english.MessagerApplication'
+}
+
 repositories {
 	mavenCentral()
 }

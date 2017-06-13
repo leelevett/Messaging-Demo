@@ -1,4 +1,4 @@
-package com.llevett;
+package com.llevett.english;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
