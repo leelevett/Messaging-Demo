@@ -17,8 +17,7 @@ apply plugin: 'org.springframework.boot'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
-// TODO Find how I got gradle compiling with two mains.
-springBoot {
+springBoot { // So Spring Boot can find a default main class.
 	mainClass = 'com.llevett.english.MessagerApplication'
 }
 
